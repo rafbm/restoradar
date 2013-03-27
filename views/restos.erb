@@ -1,0 +1,14 @@
+<% @restos.each do |resto| %>
+  <a class="resto" href="http://maps.apple.com/?q=<%= resto.location %>">
+    <div class="icon img">
+      <img src="<%= resto.icon %>" width="44">
+    </div>
+    <div class="info">
+      <h2><%= resto.name %></h2>
+      <p><%= resto.category %></p>
+    </div>
+    <div class="distance">
+      <p><small><%= resto.distance %>m</small></p>
+    </div>
+  </a>
+<% end %>
