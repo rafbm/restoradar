@@ -54,6 +54,8 @@ get '/' do
 end
 
 get '/restos' do
+  expires 60, :private
+
   opts = {
     ll: params[:location],
     limit: 50,
