@@ -3,17 +3,17 @@ Foursquare.default_params v: '20130108',
   client_secret: ENV['FOURSQUARE_SECRET']
 
 helpers do
-  def stylus(filename = nil)
+  def scss(filename = nil)
     if filename
-      str = File.read("./assets/#{filename}.styl")
+      str = File.read("./assets/#{filename}.scss")
     else
       str = yield
     end
-    Stylus.compile(str, :compress => true).gsub("\n", '')
+    Sass.compile(str, style: :compressed)
   end
 
-  def stylus_tag(filename = nil, &block)
-    "<style>#{stylus(filename, &block)}</style>"
+  def scss_tag(filename = nil, &block)
+    "<style>#{scss(filename, &block)}</style>"
   end
 
   def coffee_script(filename = nil)

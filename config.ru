@@ -7,7 +7,6 @@ use Rack::Cache
 map '/assets' do
   assets = Sprockets::Environment.new
   assets.append_path 'assets'
-  Stylus.setup(assets)
   run assets
 end
 

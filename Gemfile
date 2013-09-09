@@ -13,7 +13,7 @@ gem 'rack-cache', require: 'rack/cache'
 # Assets
 gem 'sprockets'
 gem 'coffee-script'
-gem 'stylus'
+gem 'sass'
 
 group :development do
   gem 'shotgun'
