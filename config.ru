@@ -16,9 +16,3 @@ map '/' do
 
   run Sinatra::Application
 end
-
-# New Relic
-if ENV['RACK_ENV'] == 'production'
-  # See http://support.newrelic.com/kb/troubleshooting/unicorn-no-data
-  ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
-end

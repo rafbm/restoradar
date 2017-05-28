@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.4.1'
 
 # Server
-gem 'unicorn'
+gem 'puma'
 
 # App
 gem 'sinatra'
