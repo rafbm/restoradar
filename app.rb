@@ -50,6 +50,14 @@ get '/' do
   last_modified LAST_RESTART
   expires 600, :public
 
+  if ENV['RACK_ENV'] == 'production'
+    if !request.ssl?
+      # Redirect to Heroku subdomain because HTTPS is now required by browsers
+      # for geolocation, and I have no certificate for restoradar.com.
+      next redirect 'https://restoradar.herokuapp.com/'
+    end
+  end
+
   erb :index
 end
 
