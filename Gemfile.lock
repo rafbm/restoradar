@@ -12,7 +12,6 @@ GEM
       multi_xml (>= 0.5.2)
     multi_xml (0.6.0)
     mustermann (1.0.0)
-    newrelic_rpm (4.2.0.334)
     puma (3.8.2)
     rack (2.0.3)
     rack-cache (1.7.0)
@@ -39,7 +38,6 @@ DEPENDENCIES
   awesome_print
   coffee-script
   httparty
-  newrelic_rpm
   puma
   rack-cache
   sass
@@ -51,4 +49,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.0
+   1.16.1
